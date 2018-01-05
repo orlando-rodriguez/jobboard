@@ -6,12 +6,13 @@
 
 2. Key functionality that you need to replicate includes:
   - Getting data from an API with fetch
-  - Rendering that data in a list of profiles
-  - Toggling the profile on a click event
-  - Rendering each profile's list of skills
+  - Rendering that dat
+  - Binding data from an input to an element on the page
+  - Toggling the preview on a click event
 
 3. Your app must be broken down into components for the:
   - header
-  - profiles
-  - profile details
+  - job details
+  - input form
+  - preview
   - footer

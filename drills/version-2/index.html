@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="profile.css">
     <title>Galvanize Dinosaurs</title>
   </head>
   <body>
     <header>
-
+      <img />
+      <h1>Galvanize Dinosaurs</h1>
     </header>
     <main>
-
+      <section id="profiles-container"></section>
     </main>
     <footer>
-
+      <small>Copyright 2018</small>
     </footer>
-    <script src="profile.js" charset="utf-8"></script>
-  </body>
+
+  <!-- Templates -->
+  <script id="profile-template" type="text/x-handlebars-template">
+    <div class="profile-header">
+      <img src="{{image}}" />
+      <h2>{{name}}</h2>
+      {{> skills}}
+    </div>
+  </script>
+
+  <script id="skills-template" type="text/x-handlebars-template">
+    <div class="skills-container hidden">
+      <ul class="skills-list">
+        <h4>Skills</h4>
+        {{#each skills}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" charset="utf-8"></script>
+  <script src="profile.js" charset="utf-8"></script>
+</body>
 </html>

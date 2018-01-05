@@ -1,4 +1,8 @@
-# Galvanize Dinosaurs
+# Galvanize Dinosaurs - Listings
+
+#### Deployed Link
+
+#### Framework of choice
 
 ## Instructions
 
