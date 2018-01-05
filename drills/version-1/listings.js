@@ -20,7 +20,8 @@ function submitForm(event) {
   const newListingData = {
     title: data.get('title'),
     pay: data.get('pay'),
-    description: data.get('description')
+    description: data.get('description'),
+    interested: []
   }
   addListing(newListingData)
 }
