@@ -4,7 +4,7 @@
 })()
 
 function getListings() {
-  let apiURL = 'http://fathomless-plains-51634.herokuapp.com'
+  let apiURL = 'https://fathomless-plains-51634.herokuapp.com'
   fetch(`${apiURL}/jobs`)
     .then(response => response.json())
     .then(response => {
