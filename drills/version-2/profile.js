@@ -1,32 +1,28 @@
-// let apiURL = 'http://fathomless-plains-51634.herokuapp.com'
-let apiURL = 'http://localhost:3000';
+
+// let apiURL = 'http://localhost:3000';
 
 (function initializePage(){
   Handlebars.registerPartial('skills', document.getElementById('skills-template').innerHTML)
-  getDinosaurs()
+  getDinosaurs().then(() => response.forEach(dinosaur => {
+      addProfile(dinosaur);
+      document.querySelectorAll(".profile-header").forEach(element => element.addEventListener("click", toggleDetails))
+  }})
 })()
 
 function getDinosaurs() {
-  fetch(`${apiURL}/dinosaurs`)
+  let apiURL = 'http://fathomless-plains-51634.herokuapp.com'
+  return fetch(`${apiURL}/dinosaurs`)
     .then(response => response.json())
-    .then(response => {
-      response.forEach(dinosaur => {
-        addProfile(dinosaur);
-        document.querySelectorAll(".profile-header").forEach(element => element.addEventListener("click", toggleDetails))
-      })
-    })
 }
 
 function addProfile(data) {
-  var template = document.getElementById('profile-template').innerHTML
-  var renderProfile = Handlebars.compile(template)
-  document.getElementById('profiles-container').innerHTML += renderProfile(data)
+  document.getElementById('profiles-container').innerHTML += compileTemplate('skills-template', data)
 }
 
-function addSkills(name, data) {
-  var template = document.getElementById('skills-template').innerHTML
-  var renderSkills = Handlebars.compile(template)
-  return renderSkills(data)
+function compileTemplate(template) {
+  var templateContent = document.getElementById(template).innerHTML
+  var render = Handlebars.compile(templateContent)
+  return renderProfile(data)
 }
 
 function toggleDetails(e) {
