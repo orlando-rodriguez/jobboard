@@ -2,6 +2,8 @@ describe("Form submission", () => {
     it("submits a job", () => {
         cy.visit("/");
 
+        cy.get("#job-listings li").should("have.length.gte", 4);
+
         const formFields = [
             "input[name=title]",
             "input[name=pay]",
