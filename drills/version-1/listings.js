@@ -4,8 +4,8 @@
 })();
 
 function getListings(){
-  let apiURL = "https://fathomless-plains-51634.herokuapp.com";
-  return fetch(`${apiURL}/jobs`).then(response => response.json());
+  let apiURL = "./listings.json";
+  return fetch(`${apiURL}`).then(response => response.json());
 }
 
 function submitForm(event){
