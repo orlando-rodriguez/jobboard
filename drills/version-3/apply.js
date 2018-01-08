@@ -1,6 +1,7 @@
 (function initializePage(){
   document.querySelector('#application-text').addEventListener('keyup', updatePreview);
   document.querySelector('#preview-toggle').addEventListener('click', togglePreview);
+  document.querySelector('#application-input').addEventListener('submit', submitApplication);
   getListing().then(response => {
     addListing(response);
   });
@@ -17,7 +18,6 @@ function addListing(data) {
   container.append(makeElement('p', data.description));
 }
 
-
 function makeElement(tag, text){
   let element = document.createElement(tag);
   element.textContent = text;
@@ -33,4 +33,15 @@ function updatePreview() {
 function togglePreview() {
   const preview = document.querySelector('#application-preview');
   preview.classList.toggle('hidden');
+}
+
+function submitApplication(event){
+  event.preventDefault();
+  event.target.reset();
+  document.querySelector("#application-preview").textContent = "";
+  flashSuccessMessage("Your application was submitted!");
+}
+
+function flashSuccessMessage(message){
+  document.querySelector("#message").textContent = message;
 }

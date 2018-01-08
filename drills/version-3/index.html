@@ -7,24 +7,23 @@
   </head>
   <body>
     <header>
-      <img src="./assets/g-dino.png"/>
+      <img src="./assets/g-dino.png" alt="Dinosaur Logo" />
     </header>
     <main>
       <section id="job-details">
         <h2>Job Details</h2>
-
       </section>
-      <section id="application-input">
+      <form id="application-input">
         <label>Apply Here: </label>
-        <textarea id="application-text" rows="8" cols="100"></textarea><br />
-        <a id="preview-toggle">Show Preview</a>
-      </section>
-      <section id="application-preview" class="hidden">
-
-      </section>
+        <textarea id="application-text" rows="8" cols="100"></textarea>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+      <p id="message">&nbsp;</p>
+      <button id="preview-toggle">Show Preview</button>
+      <section id="application-preview" class="hidden"></section>
     </main>
     <footer>
-      <small>Copyright 2018</small>
+      <small>&copy; 2018</small>
     </footer>
     <script src="apply.js" charset="utf-8"></script>
   </body>
