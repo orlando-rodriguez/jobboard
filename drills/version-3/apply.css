@@ -25,6 +25,8 @@ header {
 header img {
   grid-row: 1/3;
   grid-column: 1/2;
+  height: 100px;
+  width: auto;
 }
 
 header h1 {
@@ -39,12 +41,12 @@ header h1 {
 
 main {
   grid-row: 2/3;
-  display: grid;
-  grid-template-columns: 10% 40% 30% 10%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 main section {
-  padding: 0 20px 0 20px;
   grid-column: 2/3;
 }
 
@@ -54,12 +56,19 @@ small {
   margin-left: 10px;
 }
 
-p {
-  font-size: .8rem;
+a {
+  color: #C261CC;
+  text-decoration: none;
 }
 
-/* Aside */
-
+#application-preview {
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid darkgrey;
+  min-height: 100px;
+  margin-top: 20px;
+  padding: 10px;
+}
 
 /* Footer */
 
@@ -71,4 +80,10 @@ footer {
 
 footer small {
   margin: 0 auto;
+}
+
+/* Helper */
+
+.hidden {
+  display: none;
 }
