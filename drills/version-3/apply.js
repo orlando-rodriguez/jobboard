@@ -8,7 +8,7 @@
 
 function getListing() {
   let apiURL = './listing.json';
-  return fetch(`${apiURL}`).then(response => response.json());
+  return fetch(apiURL).then(response => response.json());
 }
 
 function addListing(data) {

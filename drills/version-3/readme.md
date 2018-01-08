@@ -6,7 +6,7 @@
 
 2. Key functionality that you need to replicate includes:
   - Getting data from an API with fetch
-  - Rendering that dat
+  - Rendering that data
   - Binding data from an input to an element on the page
   - Toggling the preview on a click event
 
@@ -16,3 +16,13 @@
   - input form
   - preview
   - footer
+
+## Testing
+
+1. Run `npm install`.
+2. Host your app locally on port `8080`.
+3. Navigate to this folder and run `npm test`.
+
+#### Deployed Link
+
+#### Framework of choice

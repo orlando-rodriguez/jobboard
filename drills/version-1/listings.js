@@ -5,7 +5,7 @@
 
 function getListings(){
   let apiURL = "./listings.json";
-  return fetch(`${apiURL}`).then(response => response.json());
+  return fetch(apiURL).then(response => response.json());
 }
 
 function submitForm(event){

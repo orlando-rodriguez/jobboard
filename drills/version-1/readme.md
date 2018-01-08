@@ -1,9 +1,5 @@
 # Galvanize Dinosaurs - Listings
 
-#### Deployed Link
-
-#### Framework of choice
-
 ## Instructions
 
 1. Refactor the provided site so that it uses your chosen front end framework.
@@ -25,3 +21,7 @@
 1. Run `npm install`.
 2. Host your app locally on port `8080`.
 3. Navigate to this folder and run `npm test`.
+
+#### Deployed Link
+
+#### Framework of choice
