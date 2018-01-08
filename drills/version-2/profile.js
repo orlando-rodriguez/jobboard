@@ -1,7 +1,8 @@
 (function initializePage(){
   getDinosaurs().then(response => {
-    response.forEach(addProfile);
-    document.querySelectorAll('.profile-card').forEach(element => element.addEventListener("click", toggleDetails));
+    response.map(buildProfileItem).forEach(addProfileItem);
+    document.querySelectorAll('.profile-card')
+      .forEach(element => element.addEventListener('click', toggleDetails));
   });
 })();
 
@@ -10,10 +11,15 @@ function getDinosaurs() {
   return fetch(apiURL).then(response => response.json());
 }
 
-function addProfile(data) {
-  var templateContent = document.querySelector('#profile-template').innerHTML;
-  var render = Handlebars.compile(templateContent);
-  document.querySelector('#profiles-container').innerHTML += render(data);
+function addProfileItem(profileItem) {
+  document.querySelector('#profiles').appendChild(profileItem);
+}
+
+function buildProfileItem(profile){
+  const template = document.querySelector('#profile-template').innerHTML;
+  const $li = document.createElement('li');
+  $li.innerHTML = Handlebars.compile(template)(profile);
+  return $li;
 }
 
 function toggleDetails(event) {

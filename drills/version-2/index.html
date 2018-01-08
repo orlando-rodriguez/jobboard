@@ -7,10 +7,13 @@
   </head>
   <body>
     <header>
-      <img src="./assets/g-dino.png"/>
+      <img src="./assets/g-dino.png" alt="Dinosaur Logo" />
     </header>
     <main>
-      <section id="profiles-container"></section>
+      <section id="profiles-container">
+          <h2>Profiles</h2>
+          <ul id="profiles"></ul>
+      </section>
     </main>
     <footer>
       <small>Copyright 2018</small>
@@ -23,14 +26,14 @@
         <img src="{{image}}" />
         <h2>{{name}}</h2>
       </header>
-      <div class="skills-container hidden">
+      <section class="skills-container hidden">
+        <h4>Skills</h4>
         <ul class="skills-list">
-          <h4>Skills</h4>
           {{#each skills}}
             <li>{{this}}</li>
           {{/each}}
         </ul>
-      </div>
+      </section>
     </div>
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" charset="utf-8"></script>
