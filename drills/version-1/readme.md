@@ -19,3 +19,9 @@
   - job list
   - add a job form
   - footer
+
+## Testing
+
+1. Run `npm install`.
+2. Host your app locally on port `8080`.
+3. Navigate to this folder and run `npm test`.
