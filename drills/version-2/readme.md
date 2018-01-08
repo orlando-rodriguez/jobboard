@@ -1,5 +1,9 @@
 # Galvanize Dinosaurs - Profiles
 
+#### Deployed Link
+
+#### Framework of choice
+
 ## Instructions
 
 1. Refactor the provided site so that it uses your chosen front end framework.
