@@ -1,0 +1,22 @@
+{
+    "name": "dinosaur-jobs",
+    "version": "0.0.1",
+    "description": "",
+    "main": "listings.js",
+    "scripts": {
+        "test": "npx cypress run --browser chrome"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/gSchool/Build-an-app-using-component-based-architecture.git"
+    },
+    "author": "Marlena Baker",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gSchool/Build-an-app-using-component-based-architecture/issues"
+    },
+    "homepage": "https://github.com/gSchool/Build-an-app-using-component-based-architecture#readme",
+    "devDependencies": {
+        "cypress": "^1.4.1"
+    }
+}
