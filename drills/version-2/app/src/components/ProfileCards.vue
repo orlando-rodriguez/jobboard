@@ -1,16 +1,16 @@
 <template>
-  <div id='ProfileCards'>
+  <li id='ProfileCards' class='profile-card'>
     <header class="profile-header" @click="skillsToggle = !skillsToggle">
       <img :src='profile.image' />
       <h2>{{profile.name}}</h2>
     </header>
-    <div class='skills-container' v-if='skillsToggle'>
+    <section class='skills-container' :class="{ hidden : skillsToggle }">
+      <h4>Skills</h4>
       <ul class='skills-list'>
-        <h4>Skills</h4>
         <SkillsLists :skills='profile.skills'></SkillsLists>
       </ul>
-    </div>
-  </div>
+    </section>
+  </li>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      skillsToggle: false
+      skillsToggle: true
     }
   }
 }
@@ -59,4 +59,7 @@ export default {
     list-style: none;
   }
 
+  .hidden {
+    display: none;
+  }
 </style>

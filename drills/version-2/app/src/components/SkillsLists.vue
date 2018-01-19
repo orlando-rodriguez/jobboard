@@ -1,7 +1,7 @@
 <template>
-  <div id='SkillsLists'>
+  <ul id='SkillsLists' class='skills-list'>
     <li v-for="skill in skills" :key="skill">{{skill}}</li>
-  </div>
+  </ul>
 </template>
 <script>
 export default {
@@ -15,4 +15,8 @@ export default {
 }
 </script>
 <style scoped>
+
+  .skills-list {
+    list-style: none;
+  }
 </style>

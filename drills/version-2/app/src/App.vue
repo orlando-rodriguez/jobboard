@@ -2,7 +2,12 @@
   <div id="app">
     <TheHeader></TheHeader>
     <main>
-      <ProfileCards v-for="profile in profiles" :key="profile.name" :profile="profile"></ProfileCards>
+      <section id='profile-container'>
+        <h2>Profiles</h2>
+        <ul id='profiles'>
+          <ProfileCards v-for="profile in profiles" :key="profile.name" :profile="profile"></ProfileCards>
+        </ul>
+      </section>
     </main>
     <TheFooter></TheFooter>
   </div>
