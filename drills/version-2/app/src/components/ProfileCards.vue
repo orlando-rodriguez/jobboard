@@ -6,9 +6,7 @@
     </header>
     <section class='skills-container' :class="{ hidden : skillsToggle }">
       <h4>Skills</h4>
-      <ul class='skills-list'>
         <SkillsLists :skills='profile.skills'></SkillsLists>
-      </ul>
     </section>
   </li>
 </template>
@@ -53,11 +51,7 @@ export default {
     height: 100px;
     border: 1px solid darkgrey;
     margin: 0 10px 0 10px;
-  }
-
-  .skills-list {
-    list-style: none;
-  }
+  
 
   .hidden {
     display: none;
