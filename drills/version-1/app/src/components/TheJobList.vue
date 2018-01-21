@@ -5,9 +5,7 @@
       <li>
         <h4>{{listing.title}}</h4>
         <small>{{listing.pay}}</small>
-        <p>
-          {{listing.description}}
-        </p>
+        <p>{{listing.description}}</p>
         <small>{{listing.interested.length}} dinos are interested in this job</small>
       </li>
     </ul>

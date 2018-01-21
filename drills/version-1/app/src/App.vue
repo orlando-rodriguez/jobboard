@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     addListing (listing) {
-      this.listings.push(listing)
+      this.listings.splice(0, 0, listing)
     }
   }
 }

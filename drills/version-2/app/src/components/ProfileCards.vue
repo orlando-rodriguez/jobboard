@@ -51,7 +51,7 @@ export default {
     height: 100px;
     border: 1px solid darkgrey;
     margin: 0 10px 0 10px;
-  
+  }
 
   .hidden {
     display: none;

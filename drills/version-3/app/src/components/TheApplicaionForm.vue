@@ -1,7 +1,11 @@
 <template>
   <div id='TheApplicationForm'>
-    <label>Apply Here: </label>
-    <textarea id="application-text" rows="8" cols="100" v-model="applicationText"></textarea><br />
+    <form>
+      <label>Apply Here: </label>
+      <textarea id="application-text" rows="8" cols="100" v-model="applicationText"></textarea><br />
+      <input id="submit" type="submit" value="Submit" @click.prevent.reset="submitApplication" />
+    </form>
+    <p id="message">{{ message }}</p>
   </div>
 </template>
 <script>
@@ -15,12 +19,19 @@ export default {
   },
   data () {
     return {
-      applicationText: ''
+      applicationText: '',
+      message: ''
     }
   },
   watch: {
     applicationText (newText) {
       this.getText(newText)
+    }
+  },
+  methods: {
+    submitApplication(){
+      this.message = 'Your application was submitted!'
+
     }
   }
 }

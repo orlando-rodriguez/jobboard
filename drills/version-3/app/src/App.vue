@@ -4,8 +4,8 @@
     <main>
       <TheJobDetails></TheJobDetails>
       <TheApplicaionForm :getText="getText"></TheApplicaionForm>
-      <a @click="togglePreview = !togglePreview">Show Preview</a>
-      <ThePreview :text="applicationText" v-if="togglePreview"></ThePreview>
+      <button id="preview-toggle" @click="togglePreview = !togglePreview">Show Preview</button>
+      <ThePreview :text="applicationText" :class='{hidden : togglePreview}'></ThePreview>
     </main>
     <TheFooter></TheFooter>
   </div>
@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      togglePreview: false,
+      togglePreview: true,
       applicationText: ''
     }
   },
@@ -75,5 +75,8 @@ small {
 a {
   color: #C261CC;
   text-decoration: none;
+}
+.hidden {
+  display: none;
 }
 </style>
