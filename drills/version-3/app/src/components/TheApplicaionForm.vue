@@ -31,7 +31,6 @@ export default {
   methods: {
     submitApplication(){
       this.message = 'Your application was submitted!'
-
     }
   }
 }
