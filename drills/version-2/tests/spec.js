@@ -5,7 +5,7 @@ describe("Form submission", () => {
         cy.get("#profiles > li").should("have.length.gte", 3);
 
         cy.get("#profiles > li")
-            .eq(0).find(".skills-list > li").should("be.hidden");
+            .eq(0).find(".skills-list > li").should("satisfy", hiddenOrMissing);
 
         cy.get("#profiles > li header")
             .eq(0).click();
@@ -24,7 +24,7 @@ describe("Form submission", () => {
             .eq(0).click();
 
         cy.get("#profiles > li")
-            .eq(0).find(".skills-list > li").should("be.hidden");
+            .eq(0).find(".skills-list > li").should("satisfy", hiddenOrMissing);
 
         cy.get("#profiles > li header")
             .eq(1).click();
@@ -34,3 +34,9 @@ describe("Form submission", () => {
                 .eq(0).should("have.text", "being contrary");
     });
 });
+
+function hiddenOrMissing([element]){
+    return !element
+        ? true
+        : element.offsetWidth == 0 && element.offsetHeight == 0; // not visible
+}
