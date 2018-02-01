@@ -1,0 +1,10 @@
+<h3>Add a Job</h3>
+<form class="job-form" onsubmit={{action "add"}}>
+  <label for="title">Title</label>
+  {{input type="text" id="title" name="title" value=title}}
+  <label for="pay">Compensation</label>
+  {{input type="text" id="pay" name="pay" value=pay}}
+  <label for="description">Description</label>
+  {{textarea id="description" name="description" value=description rows="8" cols="40"}}
+  <input type="submit" name="submit" value="Submit" />
+</form>
