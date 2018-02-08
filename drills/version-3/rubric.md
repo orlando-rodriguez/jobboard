@@ -2,6 +2,7 @@ A passing drill includes all of the following:
 
 - [ ] A deployed website
 - [ ] Built using a front end framework
+- [ ] All DOM manipulation is handled by front end framework
 - [ ] Makes a fetch request and renders the data returned from that request
 - [ ] Has an input area
 - [ ] Renders what is entered into that input on the page in a preview element
