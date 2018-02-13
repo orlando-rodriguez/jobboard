@@ -2,7 +2,7 @@
   <div id='app'>
     <TheHeader></TheHeader>
     <main>
-      <TheJobDetails></TheJobDetails>
+      <TheJobDetails :jobData="jobDetails"></TheJobDetails>
       <TheApplicaionForm :getText="getText"></TheApplicaionForm>
       <button id="preview-toggle" @click="togglePreview = !togglePreview">Show Preview</button>
       <ThePreview :text="applicationText" :class='{hidden : togglePreview}'></ThePreview>
@@ -30,8 +30,16 @@ export default {
   data () {
     return {
       togglePreview: true,
-      applicationText: ''
+      applicationText: '',
+      jobDetails: {}
     }
+  },
+  created() {
+    fetch('../../static/listing.json')
+    .then(response => response.json())
+    .then(response => {
+      this.jobDetails = response
+    })
   },
   methods: {
     getText(text) {
@@ -51,13 +59,11 @@ htlm {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
   margin: 0 30px 0 30px;
   padding: 0;
   font-family: sans-serif;
-  color: #1B997A;
   display: grid;
   grid-template-rows: 15% 75% 10%;
 }

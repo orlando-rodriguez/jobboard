@@ -36,4 +36,8 @@ export default {
 }
 </script>
 <style scoped>
+
+form {
+  display: block;
+}
 </style>
