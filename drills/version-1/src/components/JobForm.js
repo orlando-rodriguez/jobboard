@@ -1,9 +1,11 @@
 import React from 'react';
 
+const blankJob = {title: '', pay: '', description: '', interested: []}
+
 export default class JobForm extends React.Component {
   state = {
     statusMessage: '',
-    job: {title: '', pay: '', description: '', interested: []}
+    job: {...blankJob}
   }
 
   handleChange = (event) => {
@@ -26,7 +28,7 @@ export default class JobForm extends React.Component {
       return;
     }
     this.props.createJob(this.state.job)
-    this.setState({statusMessage: 'Created Jerb!!!'})
+    this.setState({job: {...blankJob}, statusMessage: 'Created Jerb!!!'});
   }
 
   render() {
