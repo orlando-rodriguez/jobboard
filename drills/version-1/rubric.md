@@ -2,6 +2,7 @@ A passing drill includes all of the following:
 
 - [ ] A deployed website
 - [ ] Built using a front end framework
+- [ ] All DOM manipulation is handled by front end framework
 - [ ] Makes a request to an api and renders a list with the results
 - [ ] Has a form that posts to the list on the page on submit
 - [ ] Has a component for the header
