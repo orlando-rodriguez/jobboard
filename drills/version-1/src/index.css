@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.status-bar:empty {
+  display: none;
+}
+.status-bar {
+  text-align: center;
+  margin: 4px auto;
+  width: 100%;
+  padding: 6px 0px;
+}

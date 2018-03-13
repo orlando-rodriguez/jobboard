@@ -19,7 +19,7 @@ header {
   display: grid;
   grid-template-columns: 25% 50% 15%;
   grid-template-rows: 50% 50%;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 header img {
@@ -46,11 +46,12 @@ main {
 }
 
 main section {
+  margin-top: 65px;
   grid-column: 2/3;
 }
 
 main section h2 {
-  margin: 0;
+  margin: 20px 0 0 0;
   color: #61CCB1;
 }
 

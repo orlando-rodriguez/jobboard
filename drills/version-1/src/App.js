@@ -17,18 +17,10 @@ class App extends Component {
       .then(jobs => this.setState({jobs}))
   }
 
-  createJob = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.target);
+  createJob = (job) => {
     const {jobs} = this.state;
-    jobs.unshift({
-      title: data.get('title'),
-      pay: data.get('pay'),
-      description: data.get('description'),
-      interested: []
-    });
-    this.setState({jobs});
-    event.target.reset();
+    jobs.unshift(job);
+    return this.setState({jobs});
   }
 
   render() {
