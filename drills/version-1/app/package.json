@@ -5,7 +5,7 @@
     "main": "listings.js",
     "scripts": {
         "start": "npx react-scripts start",
-        "build": "react-scripts build",
+        "build": "npx react-scripts build",
         "test": "npx cypress open",
         "eject": "react-scripts eject"
     },

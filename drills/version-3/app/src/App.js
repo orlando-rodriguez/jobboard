@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header'
-import Profiles from './components/Profiles'
+import JobDetails from './components/JobDetails'
+import InputForm from './components/InputForm'
 import Footer from './components/Footer'
 
 
@@ -10,24 +11,27 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dinosaurs: []
+      jobs: {}
     }
   }
 
   componentDidMount(){
-    return fetch('./dinosaurs.json')
+    return fetch('./listing.json')
     .then(response => response.json())
-    .then(profiles => {
-      this.setState({dinosaurs: profiles})
+    .then(listings => {
+      this.setState({jobs: listings})
     })
-  }
 
+  }
 
   render() {
     return (
       <div className="App">
       <Header />
-      <Profiles dinosaurs={this.state.dinosaurs} />
+      <main>
+      <JobDetails jobs={this.state.jobs} />
+      <InputForm />
+      </main>
       <Footer />
       </div>
     );

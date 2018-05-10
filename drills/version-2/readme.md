@@ -23,5 +23,7 @@
 3. Navigate to this folder and run `npm test`.
 
 #### Deployed Link
+https://g-dinos2.firebaseapp.com/
 
 #### Framework of choice
+React
